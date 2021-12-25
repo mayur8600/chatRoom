@@ -8,6 +8,8 @@ const { username, room } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
 
+
+document.querySelector(".yourName").innerText = username;
 const socket = io();
 
 // Join chatroom
@@ -52,8 +54,18 @@ chatForm.addEventListener('submit', (e) => {
 
 // Output message to DOM
 function outputMessage(message) {
+  console.log(message.username)
   const div = document.createElement('div');
+  const divpointer = document.createElement('div');
   div.classList.add('message');
+  if(message.username === username){
+    div.classList.add('left');
+    divpointer.classList.add("pointer")
+  }
+  else{
+    div.classList.add('right');
+    divpointer.classList.add("pointerR")
+  }
   const p = document.createElement('p');
   p.classList.add('meta');
   p.innerText = message.username;
@@ -63,6 +75,7 @@ function outputMessage(message) {
   para.classList.add('text');
   para.innerText = message.text;
   div.appendChild(para);
+  div.appendChild(divpointer);
   document.querySelector('.chatMessages').appendChild(div);
 }
 
