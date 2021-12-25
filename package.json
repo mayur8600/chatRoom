@@ -4,9 +4,8 @@
   "description": "it is the realtime chatting app created using socket",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node server",
-    "dev":"nodemon server"
+    "start":"node ./backend/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mayur",
   "license": "ISC",
@@ -14,5 +13,8 @@
     "express": "^4.17.2",
     "moment": "^2.29.1",
     "socket.io": "^4.4.0"
-  }
+  },
+  "engines": {
+    "node": "v16.13.0"
+}
 }
