@@ -5,13 +5,13 @@ const userList = document.getElementById('users');
 const msg = document.getElementById('msg')
 
 // Get username and room from URL
+const socket = io();
 const { username, room } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
 
 
 document.querySelector(".yourName").innerText = username;
-const socket = io();
 
 // Join chatroom
 socket.emit('joinRoom', { username, room });
