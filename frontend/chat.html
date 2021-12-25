@@ -10,7 +10,7 @@
     <div class="master">
     <div class="chatContainer">
       <header class="chatHeader">
-        <h1> InstaChat</h1>
+        <h1><span><img src="https://cdn-icons.flaticon.com/png/512/3797/premium/3797336.png?token=exp=1640431111~hmac=61570e260c2d61bf906cf244e4318c33" alt="img" class="chatImg"></span><span class="data">InstaChat</span></h1>
         <div class="chatFlex">
         <p class="yourName"></p>
         <button id="leave-btn" class="chatbtn">Leave Room</button>
@@ -19,13 +19,20 @@
       </header>
       <main class="chatMain">
         <div class="chatSide">
-          <h3></i> Room Name:</h3>
-          <h2 id="roomName">js</h2>
-          <h3></i> Users</h3>
+          <h3><span><img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="img" class="room"></span>Room Name</h3>
+          <h2 id="roomName"></h2>
+          <h3><span><img src="https://cdn-icons-png.flaticon.com/512/476/476863.png" alt="img" class="room"></span>Users</h3>
           <ul id="users"></ul>
         </div>
-        <div class="chatMessages"></div>
+        <div class="chatM">
+          <div class="chatMessages">
+          </div>
+          <div>
+          <div id="msgcont"></div>
+        </div>
+        </div>
       </main>
+      
       <div class="chatFormCont">
         <form id="chatForm">
           <input

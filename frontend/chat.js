@@ -2,6 +2,7 @@ const chatForm = document.getElementById('chatForm');
 const chatMessages = document.querySelector('.chatMessages');
 const roomName = document.getElementById('roomName');
 const userList = document.getElementById('users');
+const msg = document.getElementById('msg')
 
 // Get username and room from URL
 const { username, room } = Qs.parse(location.search, {
@@ -23,6 +24,7 @@ socket.on('roomUsers', ({ room, users }) => {
 
 // Message from server
 socket.on('message', (message) => {
+  
   console.log(message);
   outputMessage(message);
 
@@ -102,3 +104,35 @@ document.getElementById('leave-btn').addEventListener('click', () => {
   } else {
   }
 });
+
+msg.addEventListener('focus', (e) => {
+  socket.emit('feedback',{
+    feedback: `${username} is typing message`
+  })
+});
+
+msg.addEventListener('keypress', (e) => {
+  socket.emit('feedback',{
+    feedback: `${username} is typing message`
+  })
+});
+
+msg.addEventListener('blur', (e) => {
+  socket.emit('feedback',{
+    feedback: ""
+  })
+});
+
+socket.on('feedback', (data) => {
+  const element = `
+    
+    <p class="feedback" id="feedback">${data.feedback}</p>
+  `
+  document.getElementById('msgcont').innerHTML = element;
+})
+
+// function clearFeedback(){
+//   document.getElementById('msgcont').forEach(e =>{
+//     e.parentNode.removeChild(e);
+//   })
+// }

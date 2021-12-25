@@ -66,6 +66,10 @@ io.on('connection', socket => {
       });
     }
   });
+
+  socket.on('feedback',(data)=>{
+    socket.broadcast.emit('feedback', data);
+  })
 });
 
 
