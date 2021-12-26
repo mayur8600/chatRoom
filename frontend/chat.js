@@ -1,5 +1,5 @@
 const chatForm = document.getElementById('chatForm');
-const chatMessages = document.querySelector('.chatMessages');
+const chatMessages = document.querySelector('.chatM');
 const roomName = document.getElementById('roomName');
 const userList = document.getElementById('users');
 const msg = document.getElementById('msg')
