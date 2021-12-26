@@ -337,3 +337,47 @@ label {
     /* line-height: 2rem; 32px */
   }
 }
+
+@media screen and (max-width: 992px) {
+  .chatMain{
+    flex-direction: column;
+  }
+  .chatSide{
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  #users{
+    display: flex;
+    height: auto;
+  }
+  .chatM{
+    width: 100%;
+  }
+  .chatSide > h3 {
+    margin-left: 5px;
+  }
+  #roomName{
+    width: 95.3%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .data{
+    display: none;
+  }
+  /* .chatSide{
+    padding: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .chatSide > h3 {
+    margin-left: 5px;
+  } */
+  
+}
