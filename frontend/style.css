@@ -20,6 +20,7 @@
   background-color: #406882;
 }
 .header {
+  position: relative;
   width: 100%;
   height: auto;
   /* border: 1px solid; */
@@ -167,6 +168,12 @@ label {
     top: 10px;
 }
 
+.chatImg1{
+  position: absolute;
+    width: 12%;
+    left: 13%;
+    top: 12%;
+}
 .message {
   width: 40%;
   padding: 10px;
@@ -285,6 +292,10 @@ label {
     top: 12px;
     left: 60px;
 }
+.data1{
+  margin-left:10%;
+}
+
 /* CSS */
 #chatForm > button {
   position: absolute;
