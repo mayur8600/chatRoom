@@ -3,57 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css">
-    <title>document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <title>InstaChat</title>
+    <link rel="icon" href="./images/InstaChat.png" type="image/png" />
   </head>
   <body>
     <div class="master">
-    <div class="chatContainer">
-      <header class="chatHeader">
-        <h1><span><img src="./images/InstaChat.png" alt="img" class="chatImg"></span><span class="data">InstaChat</span></h1>
-        <div class="chatFlex">
-        <p class="yourName"></p>
-        <button id="leave-btn" class="chatbtn">Leave Room</button>
-      </div>
-        
-      </header>
-      <main class="chatMain">
-        <div class="chatSide">
-          <h3><span><img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="img" class="room"></span>Room Name</h3>
-          <h2 id="roomName"></h2>
-          <h3><span><img src="https://cdn-icons-png.flaticon.com/512/476/476863.png" alt="img" class="room"></span>Users</h3>
-          <ul id="users"></ul>
-        </div>
-        <div class="chatM">
-          <div class="chatMessages">
+      <div class="chatContainer">
+        <header class="chatHeader">
+          <h1>
+            <span
+              ><img
+                src="./images/InstaChat.png"
+                alt="img"
+                class="chatImg" /></span
+            ><span class="data">InstaChat</span>
+          </h1>
+          <div class="chatFlex">
+            <p class="yourName"></p>
+            <button id="leave-btn" class="chatbtn">Leave Room</button>
           </div>
-          <div>
-          <div id="msgcont"></div>
+        </header>
+        <main class="chatMain">
+          <div class="chatSide">
+            <h3>
+              <span
+                ><img
+                  src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png"
+                  alt="img"
+                  class="room" /></span
+              >Room Name
+            </h3>
+            <h2 id="roomName"></h2>
+            <h3>
+              <span
+                ><img
+                  src="https://cdn-icons-png.flaticon.com/512/476/476863.png"
+                  alt="img"
+                  class="room" /></span
+              >Users
+            </h3>
+            <ul id="users"></ul>
+          </div>
+          <div class="chatM">
+            <div class="chatMessages"></div>
+            <div>
+              <div id="msgcont"></div>
+            </div>
+          </div>
+        </main>
+
+        <div class="chatFormCont">
+          <form id="chatForm">
+            <input
+              id="msg"
+              type="text"
+              placeholder="Enter Message"
+              required
+              autocomplete="off"
+            />
+            <button class="chatbtn">Send</button>
+          </form>
         </div>
-        </div>
-      </main>
-      
-      <div class="chatFormCont">
-        <form id="chatForm">
-          <input
-            id="msg"
-            type="text"
-            placeholder="Enter Message"
-            required
-            autocomplete="off"
-          />
-          <button class="chatbtn"> Send</button>
-        </form>
       </div>
     </div>
-</div>
-
   </body>
 </html>
 <script
-src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
-integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
-crossorigin="anonymous"
+  src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+  integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+  crossorigin="anonymous"
 ></script>
 <script src="/socket.io/socket.io.js"></script>
 <script src="./chat.js"></script>

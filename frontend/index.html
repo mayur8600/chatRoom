@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InstaChat</title>
+    <link rel="icon" href="./images/InstaChat.png" type="image/png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <div class="master">
-    <div class="container">
+      <div class="container">
         <div class="masterhead">
-            <header class="header">
-                <p><span><img src="./images/InstaChat.png" alt="img" class="chatImg1"></span><span class="data1">InstaChat</span></p>
-            </header>
+          <header class="header">
+            <p>
+              <span
+                ><img
+                  src="./images/InstaChat.png"
+                  alt="img"
+                  class="chatImg1" /></span
+              ><span class="data1">InstaChat</span>
+            </p>
+          </header>
         </div>
         <div class="main">
-            <form action="chat.html">
-                <div class="control">
-                    <label for="username">Username</label>
-                    <div class="contro">
-
-                        <input
-                            type="text"
-                            name="username"
-                            id="username"
-                            placeholder="Enter username..."
-                            required
-                        />
-                    </div>
-                </div>
-                <div class="control">
-                    <label for="room">Room</label><br>
-                    <select name="room" id="room">
-                        <option value="JavaScript">JavaScript</option>
-                        <option value="Python">Python</option>
-                        <option value="PHP">PHP</option>
-                        <option value="C#">C#</option>
-                        <option value="Ruby">Ruby</option>
-                        <option value="Java">Java</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn">Join Chat</button>
-            </form>
+          <form action="chat.html">
+            <div class="control">
+              <label for="username">Username</label>
+              <div class="contro">
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  placeholder="Enter username..."
+                  required
+                />
+              </div>
+            </div>
+            <div class="control">
+              <label for="room">Room</label><br />
+              <select name="room" id="room">
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="PHP">PHP</option>
+                <option value="C#">C#</option>
+                <option value="Ruby">Ruby</option>
+                <option value="Java">Java</option>
+              </select>
+            </div>
+            <button type="submit" class="btn">Join Chat</button>
+          </form>
         </div>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>
